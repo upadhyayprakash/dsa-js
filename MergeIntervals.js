@@ -6,7 +6,7 @@
 
 // assumes that pair1 and pair2 are sorted ranges
 function checkIfMergeable(pair1, pair2) {
-    return pair2[0] >= pair1[0] && pair2[0] <= pair1[1];
+    return pair2[0] <= pair1[1];
 }
 
 // prints the readable collection of intervals
@@ -39,7 +39,7 @@ function mergeIntervals(inputArr) {
         // For each pair check if next sorted pair belongs to the currentPair and merge, If not, consider the next range.
         for (let i = 0; i < sortedArr.length - 1; i++) {
             if (checkIfMergeable(sortedArr[i], sortedArr[i + 1])) {
-                currentPair = [currentPair[0], Math.max(sortedArr[i][1], sortedArr[i + 1][1])]
+                currentPair[1] = Math.max(sortedArr[i][1], sortedArr[i + 1][1]);
             } else {
                 mergedIntervals.push(currentPair);
                 currentPair = sortedArr[i + 1];
