@@ -33,7 +33,7 @@ Source: [YouTube - Algorithms by Abdul Bari](https://www.youtube.com/watch?v=0IA
   }
 ```
 
-3. Program to swap two numbers.
+3. <a name="3"></a>Program to swap two numbers.
 ```javascript
   /**
   * Program to swap two numbers
