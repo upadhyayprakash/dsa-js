@@ -30,26 +30,34 @@ function mergeIntervals(inputArr) {
 
     let mergedIntervals = [];
     // store the merged intervals
-    let currentPair = sortedArr[0];
-    // pointer to the track the current interval
 
-    // For each pair check if next sorted pair belongs to the currentPair and merge, If not, consider the next range.
-    for (let i = 0; i < sortedArr.length - 1; i++) {
-        if (checkIfMergeable(sortedArr[i], sortedArr[i + 1])) {
-            currentPair = [currentPair[0], Math.max(sortedArr[i][1], sortedArr[i + 1][1])]
-        } else {
-            mergedIntervals.push(currentPair);
-            currentPair = sortedArr[i + 1];
+    if (sortedArr.length) {
+        // check for empty collection
+        let currentPair = sortedArr[0];
+        // pointer to the track the current interval
+
+        // For each pair check if next sorted pair belongs to the currentPair and merge, If not, consider the next range.
+        for (let i = 0; i < sortedArr.length - 1; i++) {
+            if (checkIfMergeable(sortedArr[i], sortedArr[i + 1])) {
+                currentPair = [currentPair[0], Math.max(sortedArr[i][1], sortedArr[i + 1][1])]
+            } else {
+                mergedIntervals.push(currentPair);
+                currentPair = sortedArr[i + 1];
+            }
         }
+
+        // add the leftout pair
+        mergedIntervals.push(currentPair);
     }
-
-    // add the leftout pair
-    mergedIntervals.push(currentPair);
-
     // print mergedIntervals
     console.log('### Merged Intervals');
     printIntervals(mergedIntervals);
 }
 
+// case-1
+console.log('### case-1')
 inputArr = [[1, 3], [2, 6], [8, 10], [9, 11], [15, 18], [2, 4], [16, 17]];
 mergeIntervals(inputArr);
+// case-2
+console.log('\n\n### case-2')
+mergeIntervals([]);
