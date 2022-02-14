@@ -18,3 +18,9 @@ Output: [3, 2] // index of elements adding up to '13'
 Input: [5, 3, 2, 4, 1]
 Output: 8, [1,2,3,4,5] // inv_count, sorted_array
 ```
+
+4. Important Reverse Pairs in Array [Code](https://github.com/upadhyayprakash/dsa-js/blob/main/ReversePairs.js)
+```javascript
+Input: [40, 25, 19, 12, 9, 6, 2]
+Output: 15, [1,2,3,4,5] // reverse_pairs_count, sorted_array
+```
