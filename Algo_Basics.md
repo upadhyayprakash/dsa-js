@@ -37,6 +37,7 @@ Source: [YouTube - Algorithms by Abdul Bari](https://www.youtube.com/watch?v=0IA
 ```javascript
   /**
   * Program to swap two numbers
+  *
   * Input: 'num1' and 'num2' are numbers to be swapped.
   * Output: Prints two swapped numbers.
   */
