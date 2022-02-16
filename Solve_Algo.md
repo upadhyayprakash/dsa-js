@@ -24,3 +24,14 @@ Output: 8, [1,2,3,4,5] // inv_count, sorted_array
 Input: [40, 25, 19, 12, 9, 6, 2]
 Output: 15, [1,2,3,4,5] // reverse_pairs_count, sorted_array
 ```
+
+5. Find unique paths in a Grid, from Source to Destination.
+- Brute-force Approach [Code](https://github.com/upadhyayprakash/dsa-js/blob/main/GridUniquePathsBruteForce.js)
+- Dynamic Programming Approach [Code](https://github.com/upadhyayprakash/dsa-js/blob/main/GridUniquePathsByDP.js)
+- Combinatorics Approach [Code](https://github.com/upadhyayprakash/dsa-js/blob/main/GridUniquePathsByCombination.js)
+```javascript
+Input:
+m x n= 15 x 15
+
+Output: 40116600 // possible unique paths
+```
